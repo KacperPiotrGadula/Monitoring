@@ -47,3 +47,10 @@ KubePodInventory
 | summarize arg_max(TimeGenerated, *) by Name, Namespace
 | project Name, Namespace, PodIp, PodStatus, Time_Date = format_datetime(TimeGenerated, 'ss:mm:HH dd/MM/yyyy')
 ```
+
+## Output all values for a given column with a given cluster name
+
+```
+<Table_name>
+| where ClusterName == "<cluster_name>"
+```
