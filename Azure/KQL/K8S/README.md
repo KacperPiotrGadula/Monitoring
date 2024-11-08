@@ -48,6 +48,13 @@ KubePodInventory
 | project Name, Namespace, PodIp, PodStatus, Time_Date = format_datetime(TimeGenerated, 'ss:mm:HH dd/MM/yyyy')
 ```
 
+## List all tables in a given log
+
+```
+search *
+| summarize count() by $table
+```
+
 ## Output all values for a given column with a given cluster name
 
 ```
