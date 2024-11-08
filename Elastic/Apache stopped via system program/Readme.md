@@ -1,0 +1,1 @@
+count(kql='message : "*caught SIGTERM, shutting down*" and agent.name : "<host_name>" AND labels.appd_name : "application-name"  ')
