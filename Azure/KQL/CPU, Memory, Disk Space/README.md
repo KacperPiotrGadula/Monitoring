@@ -26,7 +26,7 @@ InsightsMetrics
 
 ```
 InsightsMetrics
-| where _ResourceId contains "<Instance name>"
+| where _ResourceId contains "<Instance_name>"
 | where Name == "FreeSpacePercentage"
 | project TimeGenerated, Computer, FreeSpacePercentage = toint(Val)
 | summarize avgFreeSpacePercentage = avg(FreeSpacePercentage) by bin(TimeGenerated, 15m), Computer
